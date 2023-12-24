@@ -44,6 +44,7 @@ export default function Booking(props) {
                     <img src={CheckFat} alt="" className="checkBtn"/>
                     <img src={cancel} alt=""  className="checkBtn" onClick={()=>deleteBooking(props.id)}/>
                 </div>
+                <hr className="border-solid border-grey-500 mt-2.5 w-auto col-span-5"/>
            </div>
     );
 

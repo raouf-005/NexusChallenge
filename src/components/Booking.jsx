@@ -17,7 +17,7 @@ export default function Booking() {
             <button className='searchBtn'><img src={searchBtn} alt="" /></button>
             </div>
             <h1 className='bookingTitle'>Booking</h1>
-            <div>
+            <div className='userContainer'>
                 {bookingArray.map((userBooking) => {
                     return <UserBooking key={userBooking.id} {...userBooking} />
                 })}
