@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,300;9..40,400;9..40,500&family=Inter:wght@400;600&family=Manrope:wght@300;400;500;700&family=Outfit:wght@300;400;700&display=swap');
+/* outfit font */
+
+.Booking{
+    background-color:white ;
+    width: 970px;
+    display: block;
+    margin-left: 280px;
+    font-family: Outfit;
+}
+
+.searchinput{
+    padding: 14px 72% 14px 70px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #E6E6E6;
+    background: #FAFAFA;
+    position: relative;
+    border-radius: 0.3rem;
+}
+.searchinput::placeholder{
+    font-family: Outfit;
+    color: #4C4C4C;
+    font-size: 18px;
+    font-weight: 400;
+}
+.searchContainer{
+    position: relative;
+    margin-top: 8px;
+    margin-left: 32px;
+}
+.searchBtn{
+    cursor: pointer;
+    border: none;
+    width: 60px;
+   height: 100%;
+   background-color: transparent;
+   position: absolute;
+   left: 0;
+   top: 0;
+}
+.bookingTitle{
+    color:  #3B28CC;
+    margin-left: 62px;
+    margin-top: 57px;
+    margin-bottom: 30px;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+
+
+/* Path: src/styles/UserBooking.css */
+
+.userBookingContainer{
+    margin-left: 62px;
+   display: grid;
+   grid-template-columns: 140px 110px 280px 180px 200px;
+    align-items: center;
+    text-align: center;
+}
+.userName{
+    color: #808080;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+}
+.userBtn{
+    background-color: #8E8E8E;
+    border-radius: 0.4rem;
+    padding-block: 8px; 
+    margin-inline: 16px; 
+    border: none;
+    color: white;  
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.bookingDate{
+    color:#8E8E8E;
+   
+
+}
+.userImgNameContainer{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.userImgNameContainer img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    object-fit: cover;
+    background:  lightgray 50% / cover no-repeat;
+}
+.checkContainer{
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+
+}
+.checkBtn{
+    height: 100%;
+    width: 30px;
+    
+    cursor: pointer;
+}
+
+/* Path: src/styles/bookingBottom.css */
+.bookingBottom{
+    display: flex;
+    gap: 40px;
+    margin-left: 60px;
+    margin-top: 20px;
+    height: 64px;
+    align-items: center;
+    padding: 0px 0px 0px 30px;
+    background-color: #F7F7F7;
+}
+
+.bookingBottom button{
+    background-color: #E6E6E6;
+    border-radius: 100%;
+    margin-inline: 6px;
+    padding: 7px 11px 7px 11px;
+    border: none;
+    color: #4C4C4C;
+    font-weight: 600; 
+    cursor: pointer;
+}

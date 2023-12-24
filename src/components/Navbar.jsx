@@ -40,9 +40,6 @@ const Button = (props) => {
 export default function Navbar() {
 const [currentPage, setCurrentPage] = useState('Dashboard')
 
-
-    
-
     return (
         <nav className='sideNavBar'>
                 <img src={SyphaxLogo} alt="" className='LogoSyphax' />
