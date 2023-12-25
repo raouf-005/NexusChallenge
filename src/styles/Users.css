@@ -1,0 +1,49 @@
+.Users{
+    background-color:white ;
+    width: 970px;
+    display: block;
+    font-family: Outfit;
+}
+
+.userContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.userleftSection{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        width: 140px;
+        
+}
+
+.userleftSection img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    object-fit: cover;
+    background:  lightgray 50% / cover no-repeat;
+    
+}
+.userName{
+    color: #808080;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.userDate{
+    color:#8E8E8E;
+    flex: 1;
+    padding-left: 120px;
+    
+}
+
+.checkBtn{
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+}

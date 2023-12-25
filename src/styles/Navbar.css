@@ -3,17 +3,16 @@
 
 
 .sideNavBar{
-    position: fixed; 
+    position: fixed;
     top: 0;
     left: 0;
-    width: 280px;
+    width: 250px;
     height: 100%;
     color: #8E8E8E;
     background: #F2F2F2;
     display: flex;
     flex-direction: column;
     gap: 130px;
-    z-index: 100;
 
 }
 
@@ -41,7 +40,7 @@
     align-items: center;
     padding: 9px 12px;
     gap: 11px;
-    width: 81%;
+    width: 85%;
     border: none;
     border-radius: 0.4rem;
     font-family: 'Manrope', sans-serif;

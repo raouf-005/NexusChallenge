@@ -11,18 +11,18 @@ import { UsersProvider } from "./UsersProvider";
 
 
 
-export default function Booking(props) {
+export default function UserBooking(props) {
     
     
    const {bookingArray,setBookingArray} = useContext(UsersProvider)
    
-
+     const deleteBooking = (id) => {
+    const newBookingArray = bookingArray.filter((user) => user.id !== id);
+    setBookingArray(newBookingArray);
+    };
 
     const date = new Date().toLocaleDateString("en-US");
-    const deleteBooking = (id) => {
-        const newBookingArray = bookingArray.filter((user) => user.id !== id);
-        setBookingArray(newBookingArray);
-    };
+   
     useEffect(() => { 
         localStorage.setItem('usersBookingArray',JSON.stringify(bookingArray))
      ,[bookingArray]})
@@ -49,3 +49,4 @@ export default function Booking(props) {
     );
 
 }
+

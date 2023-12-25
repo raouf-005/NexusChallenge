@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,300;9..40,400;9..40,500&family=Inter:wght@400;600&family=Manrope:wght@300;400;500;700&family=Outfit:wght@300;400;700&display=swap');
+/* outfit font */
+
+.MiddleTemplate{
+    background-color:white ;
+    width: 970px;
+    display: block;
+    font-family: Outfit;
+    margin-left: -20px;
+}
+
+.searchinput{
+    padding: 14px 72% 14px 70px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #E6E6E6;
+    background: #FAFAFA;
+    position: relative;
+    border-radius: 0.3rem;
+}
+.searchinput::placeholder{
+    font-family: Outfit;
+    color: #4C4C4C;
+    font-size: 18px;
+    font-weight: 400;
+}
+.searchContainer{
+    position: relative;
+    margin-top: 8px;
+    margin-left: 32px;
+}
+.searchBtn{
+    cursor: pointer;
+    border: none;
+    width: 60px;
+   height: 100%;
+   background-color: transparent;
+   position: absolute;
+   left: 0;
+   top: 0;
+   display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+.searchBtn img{
+    width: 35px;
+}
+
+.PageTitle{
+    color:  #3B28CC;
+    margin-left: 62px;
+    margin-top: 57px;
+    margin-bottom: 30px;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+
+
+
+/* Path: src/styles/BottomPart.css */
+.BottomPart{
+    display: flex;
+    gap: 40px;
+    margin-left: 60px;
+    margin-top: 30px;
+    height: 64px;
+    align-items: center;
+    padding: 0px 0px 0px 30px;
+    background-color: #F7F7F7;
+}
+
+.BottomPart button{
+    background-color: #E6E6E6;
+    border-radius: 100%;
+    margin-inline: 4px;
+    padding: 2px 10px 2px 10px;
+    border: none;
+    color: #4C4C4C;
+    font-weight: 600; 
+    cursor: pointer;
+}
+
