@@ -31,7 +31,7 @@ export default function Booking(props) {
 
     return (
            <div className="userBookingContainer">
-                <div className="userImgNameContainer">
+                <div className ="userImgNameContainer">
                     <img src={test ||props.img} alt="" />
                     <h4 className="userName">{props.name}</h4>
                 </div>

@@ -1,9 +1,9 @@
 import React from 'react'
 import '../styles/Booking.css'
 import searchBtn from '../assets//booking/searchBtn.svg'
-import UserBooking from './UserBooking'
+import UserBooking from '../components/UserBooking'
 import { useContext } from 'react'
-import { UsersProvider } from './UsersProvider'
+import { UsersProvider } from '../components/UsersProvider'
 
 
 

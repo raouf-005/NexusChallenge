@@ -7,7 +7,7 @@ import Button from "./Button";
 
 export default function Rightbar() {
     return(
-        <div className="rightbar text-gray-900 p-5 px-8 text-center ">
+        <div className="rightbar text-gray-900 p-5 px-8 text-center w-[20%]">
             <Profile />
             <div id="LoyalCustomers" className="flex flex-col justify-center items-center">
                 <h1 className="font-semibold text-lg text-blue mb-2">Loyal Customers</h1>

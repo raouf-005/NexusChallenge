@@ -1,17 +1,18 @@
 import React from "react";
 import Navbar from "./components/Navbar"
 import Rightbar from "./components/Rightbar"
-import Booking from "./components/Booking";
+import Booking from "./Pages/Booking";
 import { UsersContext } from "./components/UsersProvider";
 import './App.css'
+import Dashboard from "./Pages/Dashboard";
 
 
 export default function App() {
   return (
-    <div className="pageStructure">
+    <div className="pageStructure flex justify-center">
       <Navbar/>
       <UsersContext>
-      <Booking/>
+        <Dashboard/>
       </UsersContext>
       <Rightbar/>
     </div>
