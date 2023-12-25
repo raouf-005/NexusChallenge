@@ -19,7 +19,7 @@ const Dashboard = () => {
             </div>
             <div className='dashboardUserContainer'>
             <h1 className="text-start w-[90%] text-xl font-semibold">All Users</h1>
-            <div className="flex justify-between w-[92%] ml-20">
+            <div className="flex justify-between w-[92%] ml-20 pe-6">
                 <p>Monitor users, Booking ...etc</p>
                 <div id="filter" className="flex p-2 border-2 border-gray-600 rounded-lg w-fit">
                     <img src={FilterBtn} alt="" />

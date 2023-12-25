@@ -7,7 +7,7 @@
 /* Path: src/styles/UserBooking.css */
 
 .userBookingContainer{
-    margin-left: 62px;
+    margin-left: 40px;
    display: grid;
    grid-template-columns: 140px 110px 280px 180px 200px;
     align-items: center;

@@ -6,6 +6,7 @@ import test from "../assets/booking/test.svg";
 const User = (props)=>{
     const date = new Date().toLocaleDateString("en-US");
     return(
+        <>
         <div className="userContainer">
             <div className="userleftSection">
                 <img src={test} alt="" />
@@ -14,7 +15,12 @@ const User = (props)=>{
              <p className="userDate">{date}</p>
                 
             <img src={cancel} alt=""  className="checkBtn" />
+            
         </div>
+        
+        <hr className="border-solid border-grey-500 mt-2.5 w-auto col-span-5 ml-16"/>
+        
+        </>
     )
 }
     

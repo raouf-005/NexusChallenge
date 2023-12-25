@@ -1,50 +1,17 @@
 import React from 'react'
 import '../styles/MiddleTemplate.css'
-import Booking from './Booking'
-import Users from './Users'
 import SearchBar from '../components/SearchBar'
-import Dashboard from './Dashboard'
-
-
-const PageSelector = ({page}) => {
-
-    if(page === "Booking"){
-        return(
-            <>
-             <h1 className='PageTitle'>Booking</h1>
-            <Booking />
-            </>
-           
-        )
-    }else
-        if(page === "Users"){
-            return(
-                <>
-                <h1 className='PageTitle'>Users</h1>
-                <Users />
-                </>
-                
-            )
-            }
-    else{
-        return(
-            <>
-            <Dashboard />
-            </>
-        )
-
-
-        }
-}
+import PageSelector from '../components/PageSelector'
+import { currentPageContext } from '../App'
 
 export default function MiddleTemplate(props) {
-    //the only thing i need to add is specifing the page
+    const {currentPage,setCurrentPage} = React.useContext(currentPageContext)
+
+
     return (
         <div className='MiddleTemplate'>
-            <SearchBar />
-                    
-            <PageSelector page="User" />
-
+            <SearchBar />  
+            <PageSelector page={currentPage} />
             <div className='BottomPart'>
                 <p>Previous page</p>
                 <div>

@@ -1,4 +1,4 @@
-import React, { createContext, useEffect } from 'react';
+import React, { createContext, useEffect ,useContext} from 'react';
 import { useState } from 'react';
 import '../styles/Navbar.css'
 import Gear from '../assets/navbar/gear.svg'
@@ -8,25 +8,17 @@ import Users from '../assets/navbar/Users.svg'
 import SignOut from '../assets/navbar/SignOut.svg'
 import Notepad from '../assets/navbar/Notepad.svg'
 import SyphaxLogo from '../assets/navbar/SyphaxLogo.svg'
+import { currentPageContext } from '../App';
 
-
-
-
-
-
-
-//i will use useContext later to pass the usestate props without passing them through the components
-const Button = (props) => {
+function Button(props)  {
     
-
-    let buttonstyle = props.name === props.currentPage ? 'buttonCurrentpageStyling' : 'buttonStyling'
+    const {currentPage,setCurrentPage} = useContext(currentPageContext)
+    let buttonstyle = props.name ===currentPage ? 'buttonCurrentpageStyling' : 'buttonStyling'
     return (
         <button
             name={props.name}
             className={buttonstyle}
-            onClick={() => {props.setCurrentPage(props.name)
-                console.log(props.name)
-                console.log(props.currentPage)}}
+            onClick={() => {setCurrentPage(props.name)}}
         >
             <img src={props.icon} alt="" />
             {props.name}
@@ -36,19 +28,18 @@ const Button = (props) => {
 
 
 
-
 export default function Navbar() {
-const [currentPage, setCurrentPage] = useState('Dashboard')
+
 
     return (
         <nav className='sideNavBar'>
                 <img src={SyphaxLogo} alt="" className='LogoSyphax' />
             
-                <div className='middleButtonsContainer'>
-                        <Button name="Dashboard" icon={List} setCurrentPage={setCurrentPage} currentPage={currentPage}/>
-                        <Button name="Booking" icon={Notepad} setCurrentPage={setCurrentPage} currentPage={currentPage} />
-                        <Button name="Users" icon={Users}  setCurrentPage={setCurrentPage} currentPage={currentPage}/>
-                        <Button name="Rooms" icon={Buildings}  setCurrentPage={setCurrentPage} currentPage={currentPage}/>
+                <div className='middleButtonsContainer'>  
+                        <Button name="Dashboard" icon={List} />
+                        <Button name="Booking" icon={Notepad} />
+                        <Button name="Users" icon={Users}  />
+                        <Button name="Rooms" icon={Buildings} />
                 </div>
 
                 <div className='bottomContainer'>
@@ -59,3 +50,6 @@ const [currentPage, setCurrentPage] = useState('Dashboard')
         </nav>
     )
 }
+
+
+
