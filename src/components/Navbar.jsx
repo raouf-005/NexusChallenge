@@ -14,11 +14,13 @@ function Button(props)  {
     
     const {currentPage,setCurrentPage} = useContext(currentPageContext)
     let buttonstyle = props.name ===currentPage ? 'buttonCurrentpageStyling' : 'buttonStyling'
+    
+//not page is only temporary for setting and logout until we do there functionnality
     return (
         <button
             name={props.name}
             className={buttonstyle}
-            onClick={() => {setCurrentPage(props.name)}}
+            onClick={() => {props.notPage || setCurrentPage(props.name)}}
         >
             <img src={props.icon} alt="" />
             {props.name}
@@ -43,8 +45,8 @@ export default function Navbar() {
                 </div>
 
                 <div className='bottomContainer'>
-                    <Button name="Settings" icon={Gear} />
-                    <Button name="Log Out" icon={SignOut} />
+                    <Button name="Settings" icon={Gear} notPage={true} />
+                    <Button name="Log Out" icon={SignOut} notPage={true}/>
                 </div>
            
         </nav>
