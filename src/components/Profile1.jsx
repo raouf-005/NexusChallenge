@@ -1,10 +1,13 @@
 import {Avatar} from "@nextui-org/react";
+import test from "../assets/booking/test.svg";
+
+// any remplacit avatar ta3 nextui-org paceque ydir latency bzaaf
 const Profile = () => {
     return (
         <div className="flex justify-center items-center text-left text-sm">
             <div className="flex text-gray-900 items-center justify-center">
                 <div className="w-20 h-20 rounded-full flex justify-center items-center mr-[-8px]">
-                    <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
+                   <img src={test}className="w-10 rounded-full object-cover bg-neutral-300" />
                 </div>
                 <div className="text">
                     <h1 className="font-bold text-blue">Ahmed Ahmed</h1>
