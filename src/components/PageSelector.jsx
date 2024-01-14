@@ -1,7 +1,7 @@
 import Booking from '../Pages/Booking'
 import Users from '../Pages/Users'
 import Dashboard from '../Pages/Dashboard'
-
+import Rooms from '../Pages/Rooms'
 
 
 const PageSelector = ({page}) => {
@@ -23,6 +23,13 @@ const PageSelector = ({page}) => {
                 </>    
             )
           break;
+        case "Rooms":
+            return(
+                <>
+                <h1 className='PageTitle'>Rooms</h1>
+                <Rooms />
+                </>
+            )
         default:
             return(
                 <>
