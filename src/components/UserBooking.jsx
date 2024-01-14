@@ -1,24 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState,useContext, createContext } from "react";
 import "../styles/Booking.css";
 import test from "../assets/booking/test.svg";
 import CheckFat from "../assets/booking/CheckFat.svg";
 import cancel from "../assets/booking/cancel.svg";
-import { useContext } from "react";
 import { UsersProvider } from "./UsersProvider";
-
-
-
+import Popup from "./Popup";
+import { currentPageContext } from "../App";
 
 
 
 export default function UserBooking(props) {
-    
-    
    const {bookingArray,setBookingArray} = useContext(UsersProvider)
-   
-     const deleteBooking = (id) => {
-    const newBookingArray = bookingArray.filter((user) => user.id !== id);
-    setBookingArray(newBookingArray);
+   const {idSure,setIdSure} = useContext(currentPageContext)
+
+     const checkdeleting = (id) => {
+      
+       const popupstyling = document.querySelector('.popup')
+        popupstyling.style.display = 'block';
+        setIdSure(id)
     };
 
     const date = new Date().toLocaleDateString("en-US");
@@ -42,7 +41,7 @@ export default function UserBooking(props) {
                 
                 <div className="checkContainer">
                     <img src={CheckFat} alt="" className="checkBtn"/>
-                    <img src={cancel} alt=""  className="checkBtn" onClick={()=>deleteBooking(props.id)}/>
+                    <img src={cancel} alt=""  className="checkBtn" onClick={()=>checkdeleting(props.id)}/>
                 </div>
                 <hr className="border-solid border-grey-500 mt-2.5 w-auto col-span-5"/>
            </div>

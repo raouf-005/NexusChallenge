@@ -10,10 +10,10 @@ export const currentPageContext = createContext()
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('Dashboard')
-
+  const [idSure,setIdSure] = useState(0)
   return (
     <div className="pageStructure ">
-     <currentPageContext.Provider value={{currentPage,setCurrentPage}}>
+     <currentPageContext.Provider value={{currentPage,setCurrentPage,idSure,setIdSure}}>
       <Navbar/>
       <UsersContext> 
       <MiddleTemplate/>
