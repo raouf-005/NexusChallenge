@@ -2,8 +2,9 @@ import React ,{ createContext ,useState }  from "react";
 import Navbar from "./components/Navbar"
 import Rightbar from "./components/Rightbar"
 import MiddleTemplate from "./Pages/MiddleTemplate"
-import { UsersContext } from "./components/UsersProvider";
+import { UsersContext } from "./components/UsersProvider"; 
 import './App.css'
+import Popup from "./components/Popup";
 export const currentPageContext = createContext()
 
 
@@ -17,8 +18,10 @@ export default function App() {
       <Navbar/>
       <UsersContext> 
       <MiddleTemplate/>
+      <Popup/>
       </UsersContext>
       <Rightbar/>
+    
       </currentPageContext.Provider>
     </div>
   );

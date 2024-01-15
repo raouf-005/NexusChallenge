@@ -16,7 +16,6 @@ export default function Booking() {
                     return <UserBooking key={userBooking.id} {...userBooking} />
                 })}
             </div>   
-            <Popup />
         </>
     )
 }

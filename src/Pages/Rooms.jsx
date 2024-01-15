@@ -7,15 +7,15 @@ const Room = (props)=>{
     const date = new Date().toLocaleDateString("en-US");
     return(
         <>
-        <div className="flex justify-around  pt-3 pb-3 ">
+        <div className="grid grid-cols-5 items-center pt-3 pb-3 ms-[80px] ">
             <h4>{`Room ${props.number}`}</h4>
             <p>{`${props.type} Bed`}</p>
             <p> {`${props.nbrperson} Person`}</p>
             <p>{props.available?"Availble":"Not Availble"}</p>
-            <button>Booking</button>
+            <button className="bg-blue px-4 py-3 mx-8 text-sm text-gray-50 rounded-md hover:bg-indigo-500">Booking</button>
         </div>
         
-        <hr className="border-solid border-grey-500 mt-2.5 w-auto col-span-5 ml-16"/>
+        <hr className="border-solid border-grey-500  w-auto col-span-5 "/>
         
         </>
     )
@@ -163,7 +163,7 @@ export default function Rooms() {
     const users =JSON.parse(localStorage.getItem('usersBookingArray')) || []
 
   return (
-    <div className="Room">
+    <div className="Room -mt-6 ml-4">
             <div>
                 {
                     rooms.map((room)=>{
